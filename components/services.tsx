@@ -1,35 +1,18 @@
-import { HeartPulse, Sparkles, Activity, Leaf } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { SectionReveal } from "@/components/section-reveal";
 
 const services = [
-  {
-    title: "Klasická masáž",
-    description:
-      "Tradiční technika pro uvolnění svalů, zlepšení prokrvení a celkové fyzické pohody.",
-    price: "od 850 Kč / 60 min",
-    icon: HeartPulse,
-  },
-  {
-    title: "Sportovní masáž",
-    description:
-      "Intenzivnější péče zaměřená na aktivní klienty, regeneraci po sportu a prevenci přetížení.",
-    price: "od 950 Kč / 60 min",
-    icon: Activity,
-  },
-  {
-    title: "Relaxační masáž",
-    description:
-      "Jemná, uklidňující masáž proti stresu, která navozuje hluboký klid a mentální rovnováhu.",
-    price: "od 900 Kč / 60 min",
-    icon: Sparkles,
-  },
-  {
-    title: "Regenerační masáž",
-    description:
-      "Cílená péče pro unavené tělo s důrazem na obnovu vitality a dlouhodobou regeneraci.",
-    price: "od 980 Kč / 60 min",
-    icon: Leaf,
-  },
+  "Klasická masáž",
+  "Masáž zad a šíje",
+  "Masáž nohou a chodidel",
+  "Masáž rukou",
+  "Masáž hýždí",
+  "Masáž zad, šíje a nohou",
+  "Dornova metoda",
+  "Měkké techniky",
+  "Breussova masáž",
+  "Indická masáž hlavy",
+  "Baňkování",
 ];
 
 export function Services() {
@@ -40,25 +23,39 @@ export function Services() {
           <p className="mb-3 text-xs uppercase tracking-[0.25em] text-[var(--primary)]">
             Služby
           </p>
-          <h2 className="text-3xl md:text-4xl">Masáže přizpůsobené vašim potřebám</h2>
+          <h2 className="text-3xl md:text-4xl">Typy masáží a technik</h2>
+          <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+            Výběr technik se vždy přizpůsobuje aktuálním potřebám klienta.
+          </p>
         </div>
       </SectionReveal>
-      <div className="grid gap-6 md:grid-cols-2">
-        {services.map(({ icon: Icon, title, description, price }) => (
-          <SectionReveal key={title}>
-            <article className="glass-card h-full rounded-3xl p-7 transition duration-300 hover:translate-y-[-4px] hover:shadow-2xl">
-              <div className="mb-5 inline-flex rounded-2xl bg-[var(--secondary)]/20 p-3 text-[var(--primary)]">
-                <Icon size={24} />
+      <SectionReveal>
+        <article className="glass-card rounded-3xl p-7 md:p-9">
+          <div className="mb-6 grid gap-3 md:grid-cols-3">
+            <div className="rounded-2xl border border-stone-200/70 bg-[var(--surface)]/80 p-4">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">Ceník</p>
+              <p className="mt-1 text-xl font-semibold text-[var(--primary)]">700 Kč / hodina</p>
+            </div>
+            <div className="rounded-2xl border border-stone-200/70 bg-[var(--surface)]/80 p-4">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">Provozní doba</p>
+              <p className="mt-1 text-sm font-medium">Po-So dle objednávek</p>
+            </div>
+            <div className="rounded-2xl border border-stone-200/70 bg-[var(--surface)]/80 p-4">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">Dárkové poukazy</p>
+              <p className="mt-1 text-sm font-medium">Libovolná hodnota</p>
+            </div>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <div key={service} className="flex items-start gap-2 rounded-xl border border-stone-200/60 p-3">
+                <CheckCircle2 size={16} className="mt-0.5 text-[var(--primary)]" />
+                <p className="text-sm">{service}</p>
               </div>
-              <h3 className="text-2xl">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                {description}
-              </p>
-              <p className="mt-5 text-sm font-semibold text-[var(--primary)]">{price}</p>
-            </article>
-          </SectionReveal>
-        ))}
-      </div>
+            ))}
+          </div>
+        </article>
+      </SectionReveal>
     </section>
   );
 }

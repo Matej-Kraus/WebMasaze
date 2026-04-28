@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -14,21 +13,25 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Masáže Poniklá | Relaxace pro tělo i mysl",
+  title: "Masáže Eva Koldovská | Relaxace pro tělo i mysl",
   description:
-    "Profesionální masáže v Poniklé. Individuální přístup, klidné prostředí a kvalitní techniky pro zdravé tělo i mysl.",
+    "Masáže Evy Koldovské v Poniklé. Individuální masáže, Dornova metoda, měkké techniky, baňkování a další péče pro tělo i mysl.",
   keywords: [
-    "masáže poniklá",
+    "masáže eva koldovská",
+    "eva koldovská",
     "klasická masáž",
-    "sportovní masáž",
-    "relaxační masáž",
-    "regenerační masáž",
+    "dornova metoda",
+    "breussova masáž",
+    "baňkování",
   ],
   openGraph: {
-    title: "Masáže Poniklá",
+    title: "Masáže Eva Koldovská",
     description: "Dopřejte si odpočinek ještě dnes.",
     type: "website",
     locale: "cs_CZ",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -38,9 +41,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" suppressHydrationWarning>
+    <html lang="cs">
       <body className={`${inter.variable} ${playfair.variable} bg-stone-50 text-stone-800 antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
       </body>
     </html>
   );

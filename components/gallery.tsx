@@ -6,8 +6,6 @@ const galleryImages = [
   "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80",
 ];
 
 export function Gallery() {
@@ -19,13 +17,13 @@ export function Gallery() {
           <h2 className="text-3xl md:text-4xl">Atmosféra, kde se dobře dýchá</h2>
         </div>
       </SectionReveal>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         {galleryImages.map((src, index) => (
           <SectionReveal key={src}>
             <div className="group relative h-64 overflow-hidden rounded-2xl">
               <Image
                 src={src}
-                alt={`Masáže Poniklá - galerie ${index + 1}`}
+                alt={`Masáže Eva Koldovská - galerie ${index + 1}`}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition duration-500 group-hover:scale-105"

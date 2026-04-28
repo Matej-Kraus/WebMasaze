@@ -20,7 +20,7 @@ export function BookingCta({ onBookingOpen }: { onBookingOpen: () => void }) {
           <button
             type="button"
             onClick={onBookingOpen}
-            className="mt-8 rounded-full bg-white px-7 py-3 text-sm font-semibold text-stone-900 transition hover:translate-y-[-1px] hover:bg-stone-100"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-stone-900 transition hover:translate-y-[-1px] hover:bg-stone-100"
           >
             Rezervovat termín
           </button>

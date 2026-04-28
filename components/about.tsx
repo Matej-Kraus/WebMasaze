@@ -8,12 +8,12 @@ export function About() {
           <p className="mb-3 text-xs uppercase tracking-[0.25em] text-[var(--primary)]">O nás</p>
           <h2 className="text-3xl md:text-4xl">Profesionální přístup, lidská péče</h2>
           <p className="mt-5 leading-relaxed text-[var(--text-muted)]">
-            Jmenuji se Jan Novotný a masážím se věnuji více než 10 let. Každému klientovi
-            naslouchám a pečlivě volím techniky tak, aby terapie měla skutečný efekt.
+            Jmenuji se Eva Koldovská a v Masážích Eva Koldovská se zaměřuji na individuální přístup
+            ke každému klientovi. Cílem je vždy přesně reagovat na potřeby vašeho těla.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            Věřím v kombinaci odbornosti, respektu a příjemné atmosféry. Díky tomu se klienti
-            vracejí nejen kvůli úlevě od bolesti, ale i kvůli pocitu klidu a důvěry.
+            Kombinuji klasické i speciální techniky tak, aby masáž přinesla úlevu, regeneraci
+            a pocit klidu. Vše probíhá v příjemném prostředí v Poniklé.
           </p>
         </div>
         <div

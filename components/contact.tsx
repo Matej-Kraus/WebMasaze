@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { MapPin, MessageSquare, Phone } from "lucide-react";
 import { SectionReveal } from "@/components/section-reveal";
 
 export function Contact() {
@@ -17,30 +17,40 @@ export function Contact() {
               <Phone className="mt-0.5 text-[var(--primary)]" size={18} />
               <div>
                 <p className="font-semibold">Telefon</p>
-                <a className="text-[var(--text-muted)] transition hover:text-[var(--text-main)]" href="tel:+420777123456">
-                  +420 777 123 456
+                <a className="text-[var(--text-muted)] transition hover:text-[var(--text-main)]" href="tel:+420776884700">
+                  +420 776 884 700
                 </a>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Mail className="mt-0.5 text-[var(--primary)]" size={18} />
+              <MessageSquare className="mt-0.5 text-[var(--primary)]" size={18} />
               <div>
-                <p className="font-semibold">E-mail</p>
-                <a
-                  className="text-[var(--text-muted)] transition hover:text-[var(--text-main)]"
-                  href="mailto:info@masazeponikla.cz"
-                >
-                  info@masazeponikla.cz
-                </a>
+                <p className="font-semibold">Poznámka</p>
+                <p className="text-[var(--text-muted)]">
+                  Pokud nezvedám telefon, právě masíruji. Ozvu se co nejdříve, případně
+                  můžete poslat SMS.
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 text-[var(--primary)]" size={18} />
               <div>
                 <p className="font-semibold">Adresa</p>
-                <p className="text-[var(--text-muted)]">Poniklá, Česká republika</p>
+                <p className="text-[var(--text-muted)]">Masáže Eva Koldovská, Poniklá 55</p>
               </div>
             </div>
+          </div>
+          <div className="mt-5 rounded-2xl border border-stone-300/60 bg-[var(--surface)]/70 p-4 text-sm">
+            <p className="font-semibold">Ordinační hodiny</p>
+            <p className="mt-1 text-[var(--text-muted)]">Po-So: dle objednávek</p>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a href="tel:+420776884700" className="primary-btn px-5 py-2.5">
+              Zavolat
+            </a>
+            <a href="sms:+420776884700" className="secondary-btn px-5 py-2.5">
+              Poslat SMS
+            </a>
           </div>
           <div className="mt-6 overflow-hidden rounded-2xl">
             <iframe
@@ -89,7 +99,7 @@ export function Contact() {
             </div>
             <button
               type="button"
-              className="rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:brightness-110"
+              className="primary-btn"
             >
               Odeslat zprávu
             </button>

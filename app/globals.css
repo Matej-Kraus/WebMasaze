@@ -9,17 +9,12 @@
   --secondary: #adc2b1;
 }
 
-.dark {
-  --background: #1f1b18;
-  --surface: #2b2622;
-  --text-main: #f2ece6;
-  --text-muted: #cabeb2;
-  --primary: #c8a98f;
-  --secondary: #7da391;
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 10rem;
 }
 
 body {
@@ -34,6 +29,11 @@ h3,
 h4 {
   font-family: var(--font-playfair), ui-serif, Georgia, serif;
   letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
 }
 
 .section-container {
@@ -44,4 +44,24 @@ h4 {
   background: color-mix(in srgb, var(--surface) 88%, transparent);
   border: 1px solid color-mix(in srgb, var(--primary) 12%, #ffffff);
   box-shadow: 0 20px 40px rgba(24, 18, 12, 0.08);
+}
+
+.muted-section {
+  background: color-mix(in srgb, var(--secondary) 10%, var(--background));
+}
+
+.primary-btn {
+  @apply inline-flex items-center justify-center rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:translate-y-[-1px] hover:brightness-110;
+}
+
+.secondary-btn {
+  @apply inline-flex items-center justify-center rounded-full border border-[color:color-mix(in_srgb,var(--primary)_24%,white)] px-6 py-3 text-sm font-semibold text-[var(--text-main)] transition duration-300 hover:bg-[color:color-mix(in_srgb,var(--primary)_8%,white)];
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--secondary) 65%, white);
+  outline-offset: 2px;
 }

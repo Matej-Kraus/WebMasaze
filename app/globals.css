@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f5f1;
+  --surface: #ffffff;
+  --text-main: #2f2924;
+  --text-muted: #6d645d;
+  --primary: #8b6f5a;
+  --secondary: #adc2b1;
+}
+
+.dark {
+  --background: #1f1b18;
+  --surface: #2b2622;
+  --text-main: #f2ece6;
+  --text-muted: #cabeb2;
+  --primary: #c8a98f;
+  --secondary: #7da391;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-main);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-playfair), ui-serif, Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+.section-container {
+  @apply mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24;
+}
+
+.glass-card {
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 12%, #ffffff);
+  box-shadow: 0 20px 40px rgba(24, 18, 12, 0.08);
+}
